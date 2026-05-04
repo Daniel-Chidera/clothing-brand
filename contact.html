@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop — Wearix</title>
-  <meta name="description" content="Browse all Wearix collections. Men's, Women's and Children's wear.">
+  <title>Contact — Wearix</title>
+  <meta name="description" content="Get in touch with Wearix. We'd love to hear from you.">
   <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -32,9 +32,9 @@
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="#">About</a>
-        <a href="shop.html" class="active">Shop</a>
+        <a href="shop.html">Shop</a>
         <a href="#">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
       <div class="nav-actions">
         <button class="nav-btn" aria-label="Search">
@@ -45,7 +45,7 @@
           <span class="cart-badge">0</span>
         </button>
         <a href="shop.html" class="nav-shop-btn">
-          Shop now
+          Shop all items
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <button class="hamburger" aria-label="Menu">
@@ -66,48 +66,110 @@
 
 <main>
 
-  <section class="shop-hero">
-    <div class="shop-hero-bg">
-      <img src="https://framerusercontent.com/images/g813yVl0fq2gEobS7kOZx537SY.jpg" alt="">
+  <section class="contact-hero">
+    <div class="contact-hero-bg">
+      <img src="https://framerusercontent.com/images/FFAlreqmltBbtn7iNy9lIQTMI.png" alt="">
     </div>
     <div class="container">
-      <div class="shop-hero-inner">
-        <div class="shop-hero-pill"><span></span>New Season 2026</div>
-        <h1>Elevate your daily wardrobe with ease</h1>
-        <p>Explore our handpicked modern silhouettes crafted from the world's most sustainable fabrics.</p>
-        <div class="shop-hero-btns">
-          <a href="#shop-grid" class="btn-white">Explore stores</a>
+      <div class="contact-hero-inner">
+        <div class="contact-hero-breadcrumb">Contact <span>•</span> Here to help you</div>
+        <h1>Helping you define<br>your personal style</h1>
+        <p>Contact us today for refined service designed for our discerning Wearix fashion community.</p>
+        <div class="contact-hero-btns">
+          <a href="#contact-form" class="btn-white">Browse collections</a>
           <a href="#" class="btn-outline-white">About us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="shop-body">
+  <section class="contact-info-strip">
     <div class="container">
-      <div class="shop-tabs-row">
-        <button class="shop-tab active" data-tab="all">All Products</button>
-        <button class="shop-tab" data-tab="Men's Wear">Men's Wear</button>
-        <button class="shop-tab" data-tab="Women's Wear">Women's Wear</button>
-        <button class="shop-tab" data-tab="Children's Wear">Children's Wear</button>
-        <button class="shop-tab" data-tab="new_arrivals">New Arrivals</button>
-        <button class="shop-tab" data-tab="best_sellers">Best Sellers</button>
+      <div class="contact-info-cards reveal">
+        <div class="contact-info-card">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <p class="contact-info-card-value">test@gmail.com</p>
+          <p class="contact-info-card-label">Email Address</p>
+        </div>
+        <div class="contact-info-card">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <p class="contact-info-card-value">+234 234 567 890</p>
+          <p class="contact-info-card-label">Phone Number</p>
+        </div>
+        <div class="contact-info-card">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p class="contact-info-card-value">Port Harcourt, Rivers State</p>
+          <p class="contact-info-card-label">Location</p>
+        </div>
       </div>
-      <div class="shop-products-grid" id="shop-grid"></div>
     </div>
   </section>
 
-  <section class="shop-social">
+  <section class="contact-body" id="contact-form">
     <div class="container">
-      <p class="section-label reveal">Stay Connected</p>
+      <div class="contact-layout">
+
+        <div class="contact-image-wrap reveal">
+          <img src="https://framerusercontent.com/images/6nknFZTNUtU9BA1FnqLy7dPrtmE.png" alt="Wearix fashion" loading="lazy">
+        </div>
+
+        <div class="contact-form-panel reveal reveal-d1">
+          <form class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="Nasir" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" placeholder="Nawaz" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="test@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone No</label>
+                <input type="tel" class="form-input" placeholder="+234 456 789 00">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-input" placeholder="Enquiry ....">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Enter message here..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+
+          <div class="form-success">
+            <div class="form-success-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Message sent</h3>
+            <p>Thank you for reaching out. We'll be in touch shortly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-social">
+    <div class="container">
+      <p class="section-label reveal">Stay connected</p>
       <h2 class="reveal reveal-d1">See our community in<br>modern silhouettes</h2>
-      <p class="shop-social-sub reveal reveal-d2">Connect with us on social media for a daily dose of fresh style. Featuring exclusive looks from our community.</p>
-      <div class="shop-social-btns reveal reveal-d3">
-        <a href="#" class="btn-black">
+      <p class="contact-social-sub reveal reveal-d2">Connect with us on social media for a daily dose of fresh style, featuring exclusive looks from our community.</p>
+      <div class="contact-social-btns reveal reveal-d3">
+        <a href="shop.html" class="btn-black">
           See collections
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="#" class="btn-ghost">Contact us</a>
+        <a href="contact.html" class="btn-ghost">Contact us</a>
       </div>
       <div class="social-grid reveal reveal-d4">
         <div class="social-item">
@@ -134,13 +196,13 @@
     </div>
   </section>
 
-  <section class="shop-newsletter">
+  <section class="contact-newsletter">
     <div class="container">
-      <div class="shop-newsletter-inner">
+      <div class="contact-newsletter-inner">
         <h2>Subscribe to<br>our news later</h2>
-        <form class="shop-nl-form">
+        <form class="contact-nl-form">
           <div class="nl-input-row">
-            <input type="email" placeholder="Enter your email address" autocomplete="email" required>
+            <input type="email" placeholder="Enter your email" autocomplete="email" required>
             <button type="submit" class="nl-submit">Subscribe</button>
           </div>
         </form>
@@ -155,21 +217,8 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo-wrap"><p class="footer-logo-text">Wearix</p></div>
-        <p class="footer-tagline">Premium wear for modern living. Crafted with care, designed for your every day.</p>
-        <div class="footer-contact-items">
-          <a href="mailto:test@gmail.com" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            test@gmail.com
-          </a>
-          <a href="tel:+0012345678900" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            +001 234 567 890
-          </a>
-          <a href="#" class="footer-contact-item">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            London, England
-          </a>
-        </div>
+        <p class="footer-tagline">A sophisticated e-commerce template designed for modern and minimalist brands.</p>
+        <a href="contact.html" class="btn-ghost" style="width:fit-content;margin-top:8px">Contact Wearix</a>
       </div>
       <div>
         <p class="footer-col-heading">Quick Links</p>
@@ -183,34 +232,29 @@
         </ul>
       </div>
       <div>
-        <p class="footer-col-heading">Help</p>
+        <p class="footer-col-heading">Follow us:</p>
         <ul class="footer-col-links">
-          <li><a href="#">Size Guide</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Youtube</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-social-heading">Follow us</p>
-        <div class="footer-social-links">
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            Instagram
+        <p class="footer-col-heading">Get in touch</p>
+        <div class="footer-contact-items">
+          <a href="mailto:test@gmail.com" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            test@gmail.com
           </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            Facebook
+          <a href="tel:+0012345678900" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +001 234 567 890
           </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-            Twitter
-          </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            YouTube
+          <a href="#" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            London, England
           </a>
         </div>
       </div>
@@ -229,6 +273,6 @@
 
 <script src="assets/js/cart.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/shop.js"></script>
+<script src="assets/js/contact.js"></script>
 </body>
 </html>
