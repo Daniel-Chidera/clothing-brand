@@ -1,20 +1,227 @@
 {
-  "new_arrivals": [
-    { "id": 1, "name": "Textured Knitted Shirt", "category": "Shirts", "price": 89000, "original_price": 119000, "badge": "New", "image": "https://framerusercontent.com/images/lvt1WlyrgirePb8z3BSlF9OY.jpg", "hover_image": "https://framerusercontent.com/images/dfydRQ0hineaQjqYigxtJ3UUI.jpg" },
-    { "id": 2, "name": "Structured Trench Coat", "category": "Outerwear", "price": 315000, "original_price": 420000, "badge": "New", "image": "https://framerusercontent.com/images/eY6Dmvy1WrbgKmBxjcRhwuXCs.jpg", "hover_image": "https://framerusercontent.com/images/5KzsTe2EnPlNeHEEFMr7iGl8Q.jpg" },
-    { "id": 3, "name": "Mini Denim Overalls", "category": "Bottoms", "price": 67500, "original_price": 90000, "badge": "New", "image": "https://framerusercontent.com/images/XKBImpA6SUFBTNUtQrmzAkMmj0.jpg", "hover_image": "https://framerusercontent.com/images/cUK0QrnnYh9fZ9CgITBVrpOVqbc.jpg" },
-    { "id": 4, "name": "Riviera Collar Shirt", "category": "Shirts", "price": 67500, "original_price": 90000, "badge": "New", "image": "https://framerusercontent.com/images/kanGnrYimBokWcnvmRshQIhToM.jpg", "hover_image": "https://framerusercontent.com/images/GfaKKpFbbr7OaFyCvPWaUE9M.jpg" },
-    { "id": 5, "name": "Stretch Jersey Tee", "category": "T-Shirts", "price": 97500, "original_price": 142500, "badge": "New", "image": "https://framerusercontent.com/images/m7vGnEDcM9ENme6wUOVRTjDCo.jpg", "hover_image": "https://framerusercontent.com/images/srFy8sCNq5IkDCNHign0ZVGFg.jpg" },
-    { "id": 6, "name": "Urban Utility Cargo", "category": "Bottoms", "price": 135000, "original_price": 180000, "badge": "New", "image": "https://framerusercontent.com/images/5kuNHZXwFk1bRFFCgtwzxcvg.png", "hover_image": "https://framerusercontent.com/images/WOb9Yp9Wh2uVGLxsCjRDhswPSk.png" },
-    { "id": 7, "name": "Classic Boxy Tee", "category": "T-Shirts", "price": 52500, "original_price": 67500, "badge": "New", "image": "https://framerusercontent.com/images/eZoLuRRyYkwjVZaofIyewyScswc.jpg", "hover_image": "https://framerusercontent.com/images/7ubgMQu9djFMVIvDIXChqxrUQcQ.jpg" },
-    { "id": 8, "name": "Pleated Smart Trousers", "category": "Trousers", "price": 114000, "original_price": 150000, "badge": "New", "image": "https://framerusercontent.com/images/dw0YCuifIa91zywXckPrBHJmk.webp", "hover_image": "https://framerusercontent.com/images/IEfg9X5HmPz0q0vEgmXVpAGMTT8.png" }
+  "new_arrivals": [{
+      "id": 1,
+      "name": "Textured Knitted Shirt",
+      "gender": "Men's Wear",
+      "price": 89000,
+      "original_price": 119000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/lvt1WlyrgirePb8z3BSlF9OY.jpg",
+      "hover_image": "https://framerusercontent.com/images/dfydRQ0hineaQjqYigxtJ3UUI.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Structured Trench Coat",
+      "gender": "Men's Wear",
+      "price": 315000,
+      "original_price": 420000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/eY6Dmvy1WrbgKmBxjcRhwuXCs.jpg",
+      "hover_image": "https://framerusercontent.com/images/5KzsTe2EnPlNeHEEFMr7iGl8Q.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mini Denim Overalls",
+      "gender": "Women's Wear",
+      "price": 67500,
+      "original_price": 90000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/XKBImpA6SUFBTNUtQrmzAkMmj0.jpg",
+      "hover_image": "https://framerusercontent.com/images/cUK0QrnnYh9fZ9CgITBVrpOVqbc.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Riviera Collar Shirt",
+      "gender": "Men's Wear",
+      "price": 67500,
+      "original_price": 90000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/kanGnrYimBokWcnvmRshQIhToM.jpg",
+      "hover_image": "https://framerusercontent.com/images/GfaKKpFbbr7OaFyCvPWaUE9M.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Stretch Jersey Tee",
+      "gender": "Men's Wear",
+      "price": 97500,
+      "original_price": 142500,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/m7vGnEDcM9ENme6wUOVRTjDCo.jpg",
+      "hover_image": "https://framerusercontent.com/images/srFy8sCNq5IkDCNHign0ZVGFg.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Urban Utility Cargo",
+      "gender": "Men's Wear",
+      "price": 135000,
+      "original_price": 180000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/5kuNHZXwFk1bRFFCgtwzxcvg.png",
+      "hover_image": "https://framerusercontent.com/images/WOb9Yp9Wh2uVGLxsCjRDhswPSk.png"
+    },
+    {
+      "id": 7,
+      "name": "Classic Boxy Tee",
+      "gender": "Women's Wear",
+      "price": 52500,
+      "original_price": 67500,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/eZoLuRRyYkwjVZaofIyewyScswc.jpg",
+      "hover_image": "https://framerusercontent.com/images/7ubgMQu9djFMVIvDIXChqxrUQcQ.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Pleated Smart Trousers",
+      "gender": "Men's Wear",
+      "price": 114000,
+      "original_price": 150000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/dw0YCuifIa91zywXckPrBHJmk.webp",
+      "hover_image": "https://framerusercontent.com/images/IEfg9X5HmPz0q0vEgmXVpAGMTT8.png"
+    }
   ],
-  "best_sellers": [
-    { "id": 9, "name": "Heavyweight Oversized Hoodie", "category": "Hoodies", "price": 127500, "original_price": 165000, "badge": "Best seller", "image": "https://framerusercontent.com/images/GTy2Bbh36uTYPS8F34SC1dV1cI.jpg", "hover_image": "https://framerusercontent.com/images/XHQtokxpBrRieMyXVFgUTB7KS0.jpg" },
-    { "id": 10, "name": "Patterned Knit Sweater", "category": "Knitwear", "price": 67500, "original_price": 135000, "badge": "Best seller", "image": "https://framerusercontent.com/images/Dh3OA7nlrSTKU7GkFh7IpzC704M.png", "hover_image": "https://framerusercontent.com/images/5n60PDud9wC2hKZ67RqkdLdEnOM.png" },
-    { "id": 11, "name": "Quilted Bomber Jacket", "category": "Outerwear", "price": 217500, "original_price": 270000, "badge": "Best seller", "image": "https://framerusercontent.com/images/UBz7Wqq5xr8G3Dd1Gqsc3otaozI.webp", "hover_image": "https://framerusercontent.com/images/wtLmzE2wAi9yJrXcWCnR857MSwQ.jpg" },
-    { "id": 12, "name": "Hooded Puffer Vest", "category": "Outerwear", "price": 67500, "original_price": 112500, "badge": "Best seller", "image": "https://framerusercontent.com/images/VelxipZlAypDaKEGR9UWVL51G0.png", "hover_image": "https://framerusercontent.com/images/XlozFfsresg9IzMgSZFB3KFT1lg.png" },
-    { "id": 13, "name": "Vegan Leather Leggings", "category": "Bottoms", "price": 112500, "original_price": 148500, "badge": "Best seller", "image": "https://framerusercontent.com/images/7zAqtP593wdouaqYoeCcOQ86zM.jpg", "hover_image": "https://framerusercontent.com/images/ycSkGEOzXXNIxBrt6AdcjgVnQgE.jpg" },
-    { "id": 14, "name": "Cropped Boxy Blazer", "category": "Jackets", "price": 195000, "original_price": 262500, "badge": "Best seller", "image": "https://framerusercontent.com/images/Yg7heWlymsUl0XNuDnDMxv1ndQ.jpg", "hover_image": "https://framerusercontent.com/images/okk2lkiJuugsHxV1sOdrhb14.jpg" }
+  "best_sellers": [{
+      "id": 9,
+      "name": "Heavyweight Oversized Hoodie",
+      "gender": "Men's Wear",
+      "price": 127500,
+      "original_price": 165000,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/GTy2Bbh36uTYPS8F34SC1dV1cI.jpg",
+      "hover_image": "https://framerusercontent.com/images/XHQtokxpBrRieMyXVFgUTB7KS0.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Patterned Knit Sweater",
+      "gender": "Women's Wear",
+      "price": 67500,
+      "original_price": 135000,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/Dh3OA7nlrSTKU7GkFh7IpzC704M.png",
+      "hover_image": "https://framerusercontent.com/images/5n60PDud9wC2hKZ67RqkdLdEnOM.png"
+    },
+    {
+      "id": 11,
+      "name": "Quilted Bomber Jacket",
+      "gender": "Men's Wear",
+      "price": 217500,
+      "original_price": 270000,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/UBz7Wqq5xr8G3Dd1Gqsc3otaozI.webp",
+      "hover_image": "https://framerusercontent.com/images/wtLmzE2wAi9yJrXcWCnR857MSwQ.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Hooded Puffer Vest",
+      "gender": "Children's Wear",
+      "price": 67500,
+      "original_price": 112500,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/VelxipZlAypDaKEGR9UWVL51G0.png",
+      "hover_image": "https://framerusercontent.com/images/XlozFfsresg9IzMgSZFB3KFT1lg.png"
+    },
+    {
+      "id": 13,
+      "name": "Vegan Leather Leggings",
+      "gender": "Women's Wear",
+      "price": 112500,
+      "original_price": 148500,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/7zAqtP593wdouaqYoeCcOQ86zM.jpg",
+      "hover_image": "https://framerusercontent.com/images/ycSkGEOzXXNIxBrt6AdcjgVnQgE.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Cropped Boxy Blazer",
+      "gender": "Women's Wear",
+      "price": 195000,
+      "original_price": 262500,
+      "badge": "Best seller",
+      "image": "https://framerusercontent.com/images/Yg7heWlymsUl0XNuDnDMxv1ndQ.jpg",
+      "hover_image": "https://framerusercontent.com/images/okk2lkiJuugsHxV1sOdrhb14.jpg"
+    }
+  ],
+  "mens_wear": [{
+      "id": 15,
+      "name": "Relaxed Tapered Chinos",
+      "gender": "Men's Wear",
+      "price": 97500,
+      "original_price": 130000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/eY6Dmvy1WrbgKmBxjcRhwuXCs.jpg",
+      "hover_image": "https://framerusercontent.com/images/5KzsTe2EnPlNeHEEFMr7iGl8Q.jpg"
+    },
+    {
+      "id": 16,
+      "name": "French Terry Shorts",
+      "gender": "Men's Wear",
+      "price": 52500,
+      "original_price": 70000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/dw0YCuifIa91zywXckPrBHJmk.webp",
+      "hover_image": "https://framerusercontent.com/images/IEfg9X5HmPz0q0vEgmXVpAGMTT8.png"
+    }
+  ],
+  "womens_wear": [{
+      "id": 17,
+      "name": "Ribbed Knit Midi",
+      "gender": "Women's Wear",
+      "price": 142500,
+      "original_price": 190000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/7zAqtP593wdouaqYoeCcOQ86zM.jpg",
+      "hover_image": "https://framerusercontent.com/images/ycSkGEOzXXNIxBrt6AdcjgVnQgE.jpg"
+    },
+    {
+      "id": 18,
+      "name": "V-Neck Satin Cami",
+      "gender": "Women's Wear",
+      "price": 97500,
+      "original_price": 130000,
+      "badge": "Sale",
+      "image": "https://framerusercontent.com/images/Yg7heWlymsUl0XNuDnDMxv1ndQ.jpg",
+      "hover_image": "https://framerusercontent.com/images/okk2lkiJuugsHxV1sOdrhb14.jpg"
+    },
+    {
+      "id": 19,
+      "name": "High Waisted Palazzo",
+      "gender": "Women's Wear",
+      "price": 97500,
+      "original_price": 130000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/XKBImpA6SUFBTNUtQrmzAkMmj0.jpg",
+      "hover_image": "https://framerusercontent.com/images/cUK0QrnnYh9fZ9CgITBVrpOVqbc.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Silk Slip Dress",
+      "gender": "Women's Wear",
+      "price": 180000,
+      "original_price": 240000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/kanGnrYimBokWcnvmRshQIhToM.jpg",
+      "hover_image": "https://framerusercontent.com/images/GfaKKpFbbr7OaFyCvPWaUE9M.jpg"
+    }
+  ],
+  "childrens_wear": [{
+      "id": 21,
+      "name": "Mini Graphic Tee",
+      "gender": "Children's Wear",
+      "price": 35000,
+      "original_price": 50000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/eZoLuRRyYkwjVZaofIyewyScswc.jpg",
+      "hover_image": "https://framerusercontent.com/images/7ubgMQu9djFMVIvDIXChqxrUQcQ.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Kids Cargo Joggers",
+      "gender": "Children's Wear",
+      "price": 45000,
+      "original_price": 60000,
+      "badge": "New",
+      "image": "https://framerusercontent.com/images/5kuNHZXwFk1bRFFCgtwzxcvg.png",
+      "hover_image": "https://framerusercontent.com/images/WOb9Yp9Wh2uVGLxsCjRDhswPSk.png"
+    }
   ]
 }

@@ -1,14 +1,7 @@
 let allProducts = [];
-let activeFilters = {
-  categories: [],
-  collection: 'all',
-  maxPrice: Infinity
-};
-let sortBy = 'default';
+let activeTab = 'all';
 
 const grid = document.querySelector('#shop-grid');
-const countEl = document.querySelector('#product-count');
-const activeFilterWrap = document.querySelector('#active-filters');
 
 function fmt(n) {
   return '₦' + n.toLocaleString('en-NG');
@@ -30,7 +23,7 @@ function productCard(p) {
     </div>
     <div class="product-info">
       <p class="product-name">${p.name}</p>
-      <p class="product-colors">${p.category}</p>
+      <p class="product-colors">${p.gender}</p>
       <div class="product-price-row">
         <span class="product-price">${fmt(p.price)}</span>
         ${sale ? `<span class="product-price-old">${fmt(p.original_price)}</span>` : ''}
@@ -39,101 +32,52 @@ function productCard(p) {
   </article>`;
 }
 
-function applySort(list) {
-  const copy = [...list];
-  if (sortBy === 'price-asc') return copy.sort((a, b) => a.price - b.price);
-  if (sortBy === 'price-desc') return copy.sort((a, b) => b.price - a.price);
-  if (sortBy === 'name') return copy.sort((a, b) => a.name.localeCompare(b.name));
-  return copy;
-}
-
 function render() {
-  let filtered = allProducts.filter(p => {
-    const catOk = activeFilters.categories.length === 0 || activeFilters.categories.includes(p.category);
-    const colOk = activeFilters.collection === 'all' || p.collection === activeFilters.collection;
-    const priceOk = p.price <= activeFilters.maxPrice;
-    return catOk && colOk && priceOk;
-  });
+  let list = [];
 
-  filtered = applySort(filtered);
-  if (countEl) countEl.textContent = filtered.length;
+  if (activeTab === 'all') {
+    list = allProducts;
+  } else if (activeTab === 'new_arrivals') {
+    list = allProducts.filter(p => p.collection === 'new_arrivals');
+  } else if (activeTab === 'best_sellers') {
+    list = allProducts.filter(p => p.collection === 'best_sellers');
+  } else {
+    list = allProducts.filter(p => p.gender === activeTab);
+  }
 
-  grid.innerHTML = filtered.length ?
-    filtered.map(productCard).join('') :
-    `<div class="no-results"><p>No products found</p><p>Try adjusting your filters</p></div>`;
+  grid.innerHTML = list.length ?
+    list.map(productCard).join('') :
+    `<div class="no-results"><p>No products found</p><p>Try a different category</p></div>`;
 
   grid.querySelectorAll('.reveal').forEach(el => requestAnimationFrame(() => el.classList.add('in-view')));
-  renderActiveTags();
-}
-
-function renderActiveTags() {
-  if (!activeFilterWrap) return;
-  const tags = [];
-  activeFilters.categories.forEach(c => {
-    tags.push(`<span class="active-filter-tag">${c}<button data-remove-cat="${c}">&#x2715;</button></span>`);
-  });
-  if (activeFilters.collection !== 'all') {
-    const label = activeFilters.collection === 'new_arrivals' ? 'New Arrivals' : 'Best Sellers';
-    tags.push(`<span class="active-filter-tag">${label}<button data-remove-col>&#x2715;</button></span>`);
-  }
-  activeFilterWrap.innerHTML = tags.join('');
 }
 
 async function init() {
   const res = await fetch('../shop-products.json');
   const data = await res.json();
 
+  const tag = (arr, col) => arr.map(p => ({
+    ...p,
+    collection: col
+  }));
+
   allProducts = [
-    ...data.new_arrivals.map(p => ({
-      ...p,
-      collection: 'new_arrivals'
-    })),
-    ...data.best_sellers.map(p => ({
-      ...p,
-      collection: 'best_sellers'
-    }))
+    ...tag(data.new_arrivals, 'new_arrivals'),
+    ...tag(data.best_sellers, 'best_sellers'),
+    ...tag(data.mens_wear, 'mens_wear'),
+    ...tag(data.womens_wear, 'womens_wear'),
+    ...tag(data.childrens_wear, 'childrens_wear')
   ];
-
-  const maxP = Math.max(...allProducts.map(p => p.price));
-  activeFilters.maxPrice = maxP;
-
-  ['#price-range', '#price-range-mobile'].forEach(sel => {
-    const input = document.querySelector(sel);
-    const display = document.querySelector(sel.includes('mobile') ? '#price-max-mobile' : '#price-max');
-    if (!input) return;
-    input.max = maxP;
-    input.value = maxP;
-    if (display) display.textContent = fmt(maxP);
-    input.addEventListener('input', () => {
-      activeFilters.maxPrice = parseInt(input.value);
-      document.querySelectorAll('#price-range, #price-range-mobile').forEach(r => r.value = input.value);
-      document.querySelectorAll('#price-max, #price-max-mobile').forEach(d => d.textContent = fmt(activeFilters.maxPrice));
-      render();
-    });
-  });
 
   render();
 }
 
-document.addEventListener('change', e => {
-  const cb = e.target.closest('input[type="checkbox"][data-cat]');
-  if (!cb) return;
-  const cat = cb.dataset.cat;
-  if (cb.checked) {
-    if (!activeFilters.categories.includes(cat)) activeFilters.categories.push(cat);
-  } else {
-    activeFilters.categories = activeFilters.categories.filter(c => c !== cat);
-  }
-  document.querySelectorAll(`input[data-cat="${cat}"]`).forEach(el => el.checked = cb.checked);
-  render();
-});
-
 document.addEventListener('click', e => {
-  const tab = e.target.closest('.filter-tab');
+  const tab = e.target.closest('.shop-tab');
   if (tab) {
-    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.shop-tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
-    activeFilters.collection = tab.dataset.filter;
+    activeTab = tab.dataset.tab;
     render();
     return;
   }
@@ -149,55 +93,20 @@ document.addEventListener('click', e => {
     wl.classList.toggle('wishlisted');
     return;
   }
-
-  const removeTag = e.target.closest('[data-remove-cat]');
-  if (removeTag) {
-    activeFilters.categories = activeFilters.categories.filter(c => c !== removeTag.dataset.removeCat);
-    document.querySelectorAll(`input[data-cat="${removeTag.dataset.removeCat}"]`).forEach(cb => cb.checked = false);
-    render();
-    return;
-  }
-
-  if (e.target.closest('[data-remove-col]')) {
-    activeFilters.collection = 'all';
-    document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === 'all'));
-    render();
-    return;
-  }
-
-  if (e.target.closest('.clear-filters-btn')) {
-    activeFilters.categories = [];
-    activeFilters.collection = 'all';
-    activeFilters.maxPrice = Math.max(...allProducts.map(p => p.price));
-    document.querySelectorAll('input[data-cat]').forEach(cb => cb.checked = false);
-    document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === 'all'));
-    document.querySelectorAll('#price-range, #price-range-mobile').forEach(r => r.value = r.max);
-    document.querySelectorAll('#price-max, #price-max-mobile').forEach(d => d.textContent = fmt(activeFilters.maxPrice));
-    render();
-    return;
-  }
-
-  const gridBtn = e.target.closest('.grid-toggle-btn');
-  if (gridBtn) {
-    document.querySelectorAll('.grid-toggle-btn').forEach(b => b.classList.remove('active'));
-    gridBtn.classList.add('active');
-    grid.className = `shop-grid cols-${gridBtn.dataset.cols}`;
-    return;
-  }
-
-  if (e.target.closest('.mobile-filter-btn')) {
-    document.querySelector('.filter-drawer').classList.add('open');
-    return;
-  }
-  if (e.target.closest('.filter-drawer-overlay') || e.target.closest('.filter-drawer-close')) {
-    document.querySelector('.filter-drawer').classList.remove('open');
-    return;
-  }
 });
 
-document.querySelector('#sort-select')?.addEventListener('change', e => {
-  sortBy = e.target.value;
-  render();
+document.querySelector('.shop-nl-form')?.addEventListener('submit', e => {
+  e.preventDefault();
+  const input = e.target.querySelector('input');
+  const btn = e.target.querySelector('button');
+  if (!input.value.trim()) return;
+  btn.textContent = 'Subscribed!';
+  btn.style.opacity = '0.7';
+  input.value = '';
+  setTimeout(() => {
+    btn.textContent = 'Subscribe';
+    btn.style.opacity = '';
+  }, 3000);
 });
 
 function addToCart(name) {

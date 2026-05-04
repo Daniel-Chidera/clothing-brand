@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop — Wearix</title>
-  <meta name="description" content="Browse all Wearix collections. Filter by category, price, and style.">
+  <meta name="description" content="Browse all Wearix collections. Men's, Women's and Children's wear.">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/shop.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,180 +67,94 @@
 <main>
 
   <section class="shop-hero">
+    <div class="shop-hero-bg">
+      <img src="https://framerusercontent.com/images/g813yVl0fq2gEobS7kOZx537SY.jpg" alt="">
+    </div>
     <div class="container">
       <div class="shop-hero-inner">
-        <div>
-          <h1>All Products</h1>
-          <p>Browse our full collection of premium wear</p>
-        </div>
-        <div class="shop-hero-meta">
-          <span id="product-count">0</span> products
+        <div class="shop-hero-pill"><span></span>New Season 2026</div>
+        <h1>Elevate your daily wardrobe with ease</h1>
+        <p>Explore our handpicked modern silhouettes crafted from the world's most sustainable fabrics.</p>
+        <div class="shop-hero-btns">
+          <a href="#shop-grid" class="btn-white">Explore stores</a>
+          <a href="#" class="btn-outline-white">About us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="shop-layout">
-
-      <aside class="shop-sidebar">
-        <div class="filter-group">
-          <p class="filter-group-title">Collection</p>
-          <div class="filter-options">
-            <label class="filter-option">
-              <input type="checkbox" data-cat="new_arrivals_col" style="display:none">
-              <span class="filter-option-label" style="cursor:pointer" data-col-filter="new_arrivals">
-                <span class="filter-checkbox"></span>
-                New Arrivals
-              </span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="best_sellers_col" style="display:none">
-              <span class="filter-option-label" style="cursor:pointer" data-col-filter="best_sellers">
-                <span class="filter-checkbox"></span>
-                Best Sellers
-              </span>
-            </label>
-          </div>
-        </div>
-
-        <div class="filter-group">
-          <p class="filter-group-title">Category</p>
-          <div class="filter-options">
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Shirts">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Shirts<span class="filter-count">2</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Outerwear">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Outerwear<span class="filter-count">3</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Bottoms">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Bottoms<span class="filter-count">3</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="T-Shirts">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>T-Shirts<span class="filter-count">2</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Trousers">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Trousers<span class="filter-count">1</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Hoodies">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Hoodies<span class="filter-count">1</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Knitwear">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Knitwear<span class="filter-count">1</span></span>
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" data-cat="Jackets">
-              <span class="filter-option-label"><span class="filter-checkbox"></span>Jackets<span class="filter-count">1</span></span>
-            </label>
-          </div>
-        </div>
-
-        <div class="filter-group">
-          <p class="filter-group-title">Price</p>
-          <div class="price-range-wrap">
-            <input type="range" id="price-range" min="0" step="5000">
-            <div class="price-range-labels">
-              <span>₦0</span>
-              <span id="price-max"></span>
-            </div>
-          </div>
-        </div>
-
-        <button class="clear-filters-btn">Clear all filters</button>
-      </aside>
-
-      <section class="shop-main">
-        <div class="shop-toolbar">
-          <div class="shop-filter-tabs">
-            <button class="filter-tab active" data-filter="all">All</button>
-            <button class="filter-tab" data-filter="new_arrivals">New Arrivals</button>
-            <button class="filter-tab" data-filter="best_sellers">Best Sellers</button>
-          </div>
-          <div class="shop-controls">
-            <button class="mobile-filter-btn">
-              <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
-              Filters
-            </button>
-            <select class="sort-select" id="sort-select">
-              <option value="default">Sort: Default</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="name">Name: A-Z</option>
-            </select>
-            <div class="grid-toggle">
-              <button class="grid-toggle-btn" data-cols="2" aria-label="2 columns">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="18" rx="1"/></svg>
-              </button>
-              <button class="grid-toggle-btn active" data-cols="3" aria-label="3 columns">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="9.5" y="3" width="5" height="18" rx="1"/><rect x="16" y="3" width="5" height="18" rx="1"/></svg>
-              </button>
-              <button class="grid-toggle-btn" data-cols="4" aria-label="4 columns">
-                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="4" height="18" rx="1"/><rect x="7" y="3" width="4" height="18" rx="1"/><rect x="13" y="3" width="4" height="18" rx="1"/><rect x="18" y="3" width="4" height="18" rx="1"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div id="active-filters" class="active-filters"></div>
-
-        <div class="shop-grid cols-3" id="shop-grid"></div>
-      </section>
+  <section class="shop-body">
+    <div class="container">
+      <div class="shop-tabs-row">
+        <button class="shop-tab active" data-tab="all">All Products</button>
+        <button class="shop-tab" data-tab="Men's Wear">Men's Wear</button>
+        <button class="shop-tab" data-tab="Women's Wear">Women's Wear</button>
+        <button class="shop-tab" data-tab="Children's Wear">Children's Wear</button>
+        <button class="shop-tab" data-tab="new_arrivals">New Arrivals</button>
+        <button class="shop-tab" data-tab="best_sellers">Best Sellers</button>
+      </div>
+      <div class="shop-products-grid" id="shop-grid"></div>
     </div>
-  </div>
+  </section>
+
+  <section class="shop-social">
+    <div class="container">
+      <p class="section-label reveal">Stay Connected</p>
+      <h2 class="reveal reveal-d1">See our community in<br>modern silhouettes</h2>
+      <p class="shop-social-sub reveal reveal-d2">Connect with us on social media for a daily dose of fresh style. Featuring exclusive looks from our community.</p>
+      <div class="shop-social-btns reveal reveal-d3">
+        <a href="#" class="btn-black">
+          See collections
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#" class="btn-ghost">Contact us</a>
+      </div>
+      <div class="social-grid reveal reveal-d4">
+        <div class="social-item">
+          <img src="https://framerusercontent.com/images/a7qNl1CXTOrgB91iOnO8iwyMrI.jpeg" alt="" loading="lazy">
+          <div class="social-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+        <div class="social-item">
+          <img src="https://framerusercontent.com/images/ybJODTv9BV3Z7bMYd6a6bclh6Sg.jpeg" alt="" loading="lazy">
+          <div class="social-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+        <div class="social-item">
+          <img src="https://framerusercontent.com/images/JBfpcQ5zwrSJimngcpAyoOiP1Hk.png" alt="" loading="lazy">
+          <div class="social-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+        <div class="social-item">
+          <img src="https://framerusercontent.com/images/ATHsoTzpbKxwwKkISL2Qfi2BQ2U.jpeg" alt="" loading="lazy">
+          <div class="social-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+        <div class="social-item">
+          <img src="https://framerusercontent.com/images/h5mjcigkuGzHUrDKNZj4VOiAg.jpeg" alt="" loading="lazy">
+          <div class="social-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-newsletter">
+    <div class="container">
+      <div class="shop-newsletter-inner">
+        <h2>Subscribe to<br>our news later</h2>
+        <form class="shop-nl-form">
+          <div class="nl-input-row">
+            <input type="email" placeholder="Enter your email address" autocomplete="email" required>
+            <button type="submit" class="nl-submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 
 </main>
-
-<div class="filter-drawer">
-  <div class="filter-drawer-overlay"></div>
-  <div class="filter-drawer-panel">
-    <div class="filter-drawer-header">
-      <p>Filters</p>
-      <button class="filter-drawer-close">x</button>
-    </div>
-
-    <div class="filter-group">
-      <p class="filter-group-title">Category</p>
-      <div class="filter-options">
-        <label class="filter-option"><input type="checkbox" data-cat="Shirts"><span class="filter-option-label"><span class="filter-checkbox"></span>Shirts</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Outerwear"><span class="filter-option-label"><span class="filter-checkbox"></span>Outerwear</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Bottoms"><span class="filter-option-label"><span class="filter-checkbox"></span>Bottoms</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="T-Shirts"><span class="filter-option-label"><span class="filter-checkbox"></span>T-Shirts</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Trousers"><span class="filter-option-label"><span class="filter-checkbox"></span>Trousers</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Hoodies"><span class="filter-option-label"><span class="filter-checkbox"></span>Hoodies</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Knitwear"><span class="filter-option-label"><span class="filter-checkbox"></span>Knitwear</span></label>
-        <label class="filter-option"><input type="checkbox" data-cat="Jackets"><span class="filter-option-label"><span class="filter-checkbox"></span>Jackets</span></label>
-      </div>
-    </div>
-
-    <div class="filter-group">
-      <p class="filter-group-title">Price</p>
-      <div class="price-range-wrap">
-        <input type="range" id="price-range-mobile" min="0" step="5000">
-        <div class="price-range-labels">
-          <span>₦0</span>
-          <span id="price-max-mobile"></span>
-        </div>
-      </div>
-    </div>
-
-    <button class="clear-filters-btn">Clear all filters</button>
-  </div>
-</div>
 
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo-wrap">
-          <p class="footer-logo-text">Wearix</p>
-        </div>
+        <div class="footer-logo-wrap"><p class="footer-logo-text">Wearix</p></div>
         <p class="footer-tagline">Premium wear for modern living. Crafted with care, designed for your every day.</p>
         <div class="footer-contact-items">
           <a href="mailto:test@gmail.com" class="footer-contact-item">
