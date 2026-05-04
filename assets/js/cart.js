@@ -14,12 +14,18 @@ function addToCart(name) {
   toast.textContent = `${name} added to bag`;
   document.body.appendChild(toast);
   requestAnimationFrame(() => toast.classList.add('show'));
-  setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 300); }, 2200);
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => toast.remove(), 300);
+  }, 2200);
 }
 
 document.addEventListener('click', e => {
   const btn = e.target.closest('.add-to-bag-btn');
-  if (btn) { addToCart(btn.dataset.name); return; }
+  if (btn) {
+    addToCart(btn.dataset.name);
+    return;
+  }
   const wl = e.target.closest('.wishlist-btn');
   if (wl) wl.classList.toggle('wishlisted');
 });
