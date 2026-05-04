@@ -1,7 +1,6 @@
 const header = document.querySelector('.site-header');
 const hamburger = document.querySelector('.hamburger');
 const mobileNav = document.querySelector('.mobile-nav');
-let cartCount = 0;
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 10);
@@ -35,25 +34,9 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-function updateCartBadge() {
-  const badge = document.querySelector('.cart-badge');
-  if (badge) { badge.textContent = cartCount; badge.style.transform = 'scale(1.4)'; setTimeout(() => badge.style.transform = '', 200); }
-}
-
-function addToCart(name) {
-  cartCount++;
-  updateCartBadge();
-  const toast = document.createElement('div');
-  toast.className = 'cart-toast';
-  toast.textContent = `${name} added to bag`;
-  document.body.appendChild(toast);
-  requestAnimationFrame(() => toast.classList.add('show'));
-  setTimeout(() => { toast.classList.remove('show'); setTimeout(() => toast.remove(), 300); }, 2200);
-}
-
 function productCard(p) {
   const sale = p.price < p.original_price;
-  return `<article class="product-card reveal">
+  return `<article class="product-card reveal" data-id="${p.id}" data-gender="${p.gender || p.category}" style="cursor:pointer">
     <div class="product-img-wrap">
       <img class="primary-img" src="${p.image}" alt="${p.name}" loading="lazy">
       <img class="hover-img" src="${p.hover_image}" alt="${p.name}" loading="lazy">
@@ -69,8 +52,8 @@ function productCard(p) {
       <p class="product-name">${p.name}</p>
       <p class="product-colors">${p.category}</p>
       <div class="product-price-row">
-        <span class="product-price">₦${p.price.toLocaleString("en-NG")}</span>
-        ${sale ? `<span class="product-price-old">₦${p.original_price.toLocaleString("en-NG")}</span>` : ''}
+        <span class="product-price">₦${p.price.toLocaleString('en-NG')}</span>
+        ${sale ? `<span class="product-price-old">₦${p.original_price.toLocaleString('en-NG')}</span>` : ''}
       </div>
     </div>
   </article>`;
@@ -94,10 +77,13 @@ async function loadProducts() {
   }
 
   document.addEventListener('click', e => {
-    const btn = e.target.closest('.add-to-bag-btn');
-    if (btn) addToCart(btn.dataset.name);
-    const wl = e.target.closest('.wishlist-btn');
-    if (wl) wl.classList.toggle('wishlisted');
+    const card = e.target.closest('.product-card[data-id]');
+    const isBtn = e.target.closest('.add-to-bag-btn') || e.target.closest('.wishlist-btn');
+    if (card && !isBtn) {
+      const id = card.dataset.id;
+      const gender = card.dataset.gender;
+      window.location.href = `product.html?id=${id}&gender=${encodeURIComponent(gender)}`;
+    }
   });
 }
 
@@ -111,9 +97,5 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', e => {
   input.value = '';
   setTimeout(() => { btn.textContent = 'Subscribe'; btn.style.opacity = ''; }, 3000);
 });
-
-const style = document.createElement('style');
-style.textContent = `.cart-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(12px);background:#111;color:#fff;padding:12px 24px;border-radius:8px;font-size:13px;font-weight:500;opacity:0;transition:opacity .3s,transform .3s;z-index:9999;white-space:nowrap}.cart-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.wishlist-btn.wishlisted svg{fill:#ef4444;stroke:#ef4444}`;
-document.head.appendChild(style);
 
 loadProducts();

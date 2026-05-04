@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop — Wearix</title>
-  <meta name="description" content="Browse all Wearix collections. Men's, Women's and Children's wear.">
+  <title>Product — Wearix</title>
   <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/shop.css">
+  <link rel="stylesheet" href="assets/css/product.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -32,7 +31,7 @@
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="#">About</a>
-        <a href="shop.html" class="active">Shop</a>
+        <a href="shop.html">Shop</a>
         <a href="#">Blog</a>
         <a href="#">Contact</a>
       </nav>
@@ -45,7 +44,7 @@
           <span class="cart-badge">0</span>
         </button>
         <a href="shop.html" class="nav-shop-btn">
-          Shop now
+          Shop all items
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <button class="hamburger" aria-label="Menu">
@@ -66,44 +65,113 @@
 
 <main>
 
-  <section class="shop-hero">
-    <div class="shop-hero-bg">
-      <img src="https://framerusercontent.com/images/g813yVl0fq2gEobS7kOZx537SY.jpg" alt="">
-    </div>
+  <section class="product-section">
     <div class="container">
-      <div class="shop-hero-inner">
-        <div class="shop-hero-pill"><span></span>New Season 2026</div>
-        <h1>Elevate your daily wardrobe with ease</h1>
-        <p>Explore our handpicked modern silhouettes crafted from the world's most sustainable fabrics.</p>
-        <div class="shop-hero-btns">
-          <a href="#shop-grid" class="btn-white">Explore stores</a>
-          <a href="#" class="btn-outline-white">About us</a>
+      <div class="product-layout">
+
+        <div class="product-gallery">
+          <div class="product-main-img">
+            <img id="product-main-img" src="" alt="Product image">
+            <div class="product-badge-wrap">
+              <span class="product-badge" id="product-badge"></span>
+            </div>
+          </div>
+          <div class="product-thumbnails" id="product-thumbs"></div>
+        </div>
+
+        <div class="product-info-panel">
+          <div class="product-breadcrumb">
+            <a href="shop.html">Shop</a>
+            <span class="breadcrumb-sep"></span>
+            <a href="shop.html" id="breadcrumb-cat-link">
+              <span class="breadcrumb-current" id="breadcrumb-cat"></span>
+            </a>
+          </div>
+
+          <h1 class="product-title" id="product-title"></h1>
+
+          <div class="product-price-display">
+            <span class="product-price-main" id="product-price"></span>
+            <span class="product-price-strike" id="product-strike"></span>
+          </div>
+
+          <p class="product-description">
+            Engineered with ultra-soft fleece and a dropped shoulder for the ultimate modern aesthetic and warmth. A versatile staple built for the streets and beyond.
+          </p>
+
+          <button class="product-order-btn" id="order-btn">Order Now</button>
+
+          <div class="product-details-table">
+            <div class="product-detail-row">
+              <div class="detail-icon-label">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                Material
+              </div>
+              <span class="detail-value">Heavy gauge brushed fleece cotton</span>
+            </div>
+            <div class="product-detail-row">
+              <div class="detail-icon-label">
+                <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                Care
+              </div>
+              <span class="detail-value">Wash inside out, cold water</span>
+            </div>
+            <div class="product-detail-row">
+              <div class="detail-icon-label">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Warranty
+              </div>
+              <span class="detail-value">Lifetime seam and stitch warranty</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-badges">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="trust-name">Trusted Quality</p>
+          <p class="trust-desc">Every piece is checked to ensure it meets our standards.</p>
+        </div>
+        <div class="trust-card reveal reveal-d1">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="trust-name">Real Time Tracking</p>
+          <p class="trust-desc">Get live updates from our warehouse to your doorstep.</p>
+        </div>
+        <div class="trust-card reveal reveal-d2">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <p class="trust-name">Secure Payments</p>
+          <p class="trust-desc">Shop confidently with our secure, encrypted checkout.</p>
+        </div>
+        <div class="trust-card reveal reveal-d3">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+          </div>
+          <p class="trust-name">Easy Returns</p>
+          <p class="trust-desc">Change your mind? Return any item easily within thirty days.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="shop-body">
+  <section class="product-social">
     <div class="container">
-      <div class="shop-tabs-row">
-        <button class="shop-tab active" data-tab="all">All Products</button>
-        <button class="shop-tab" data-tab="Men's Wear">Men's Wear</button>
-        <button class="shop-tab" data-tab="Women's Wear">Women's Wear</button>
-        <button class="shop-tab" data-tab="Children's Wear">Children's Wear</button>
-        <button class="shop-tab" data-tab="new_arrivals">New Arrivals</button>
-        <button class="shop-tab" data-tab="best_sellers">Best Sellers</button>
-      </div>
-      <div class="shop-products-grid" id="shop-grid"></div>
-    </div>
-  </section>
-
-  <section class="shop-social">
-    <div class="container">
-      <p class="section-label reveal">Stay Connected</p>
+      <p class="section-label reveal">Stay connected</p>
       <h2 class="reveal reveal-d1">See our community in<br>modern silhouettes</h2>
-      <p class="shop-social-sub reveal reveal-d2">Connect with us on social media for a daily dose of fresh style. Featuring exclusive looks from our community.</p>
-      <div class="shop-social-btns reveal reveal-d3">
-        <a href="#" class="btn-black">
+      <p class="product-social-sub reveal reveal-d2">Connect with us on social media for a daily dose of fresh style, featuring exclusive looks from our community.</p>
+      <div class="product-social-btns reveal reveal-d3">
+        <a href="shop.html" class="btn-black">
           See collections
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -134,11 +202,11 @@
     </div>
   </section>
 
-  <section class="shop-newsletter">
+  <section class="product-newsletter">
     <div class="container">
-      <div class="shop-newsletter-inner">
+      <div class="product-newsletter-inner">
         <h2>Subscribe to<br>our news later</h2>
-        <form class="shop-nl-form">
+        <form class="product-nl-form">
           <div class="nl-input-row">
             <input type="email" placeholder="Enter your email address" autocomplete="email" required>
             <button type="submit" class="nl-submit">Subscribe</button>
@@ -155,7 +223,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo-wrap"><p class="footer-logo-text">Wearix</p></div>
-        <p class="footer-tagline">Premium wear for modern living. Crafted with care, designed for your every day.</p>
+        <p class="footer-tagline">A sophisticated e-commerce template designed for modern and minimalist brands.</p>
         <div class="footer-contact-items">
           <a href="mailto:test@gmail.com" class="footer-contact-item">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -183,34 +251,29 @@
         </ul>
       </div>
       <div>
-        <p class="footer-col-heading">Help</p>
+        <p class="footer-col-heading">Follow us</p>
         <ul class="footer-col-links">
-          <li><a href="#">Size Guide</a></li>
-          <li><a href="#">Shipping Info</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Youtube</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-social-heading">Follow us</p>
-        <div class="footer-social-links">
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            Instagram
+        <p class="footer-col-heading">Get in touch</p>
+        <div class="footer-contact-items">
+          <a href="mailto:test@gmail.com" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            test@gmail.com
           </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            Facebook
+          <a href="tel:+0012345678900" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +001 234 567 890
           </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-            Twitter
-          </a>
-          <a href="#" class="footer-social-link">
-            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            YouTube
+          <a href="#" class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            London, England
           </a>
         </div>
       </div>
@@ -227,8 +290,12 @@
   </div>
 </footer>
 
+<div class="wearix-wordmark">
+  <p>WEARIX</p>
+</div>
+
 <script src="assets/js/cart.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/shop.js"></script>
+<script src="assets/js/product.js"></script>
 </body>
 </html>
