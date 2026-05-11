@@ -377,14 +377,14 @@
 
 .nl-submit:hover { background: var(--off-white); }
 
-.wearix-wordmark {
+.NEW WORLD-wordmark {
   background: var(--black);
   padding: 20px 0 0;
   overflow: hidden;
   line-height: 0.85;
 }
 
-.wearix-wordmark p {
+.NEW WORLD-wordmark p {
   font-size: clamp(80px, 18vw, 200px);
   font-weight: 800;
   letter-spacing: -0.04em;

@@ -23,7 +23,7 @@ async function loadProduct() {
   const product = all.find(p => p.id === productId);
   if (!product) return;
 
-  document.title = `${product.name} — Wearix`;
+  document.title = `${product.name} — NEW WORLD`;
 
   const breadcrumbCat = document.querySelector('#breadcrumb-cat');
   const breadcrumbCatLink = document.querySelector('#breadcrumb-cat-link');
